@@ -126,18 +126,20 @@ body {
     transition: all 0.2s ease;
 }
 
-#tasks-list li.checkbox:checked {
-    background-color: #00FFFF;
+#tasks-list li .checkbox:checked {
+    background-color: rgba(173, 216, 230, 0.3);
     transform: scale(1.1);
 }
 
-#tasks-list li.checkbox:checked::before {
+#tasks-list li .checkbox:checked::before {
     content: '\2713';
-    color: white;
+    color: #00FFFF;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    width: 100%;
+    height: 100%;
 }
 
 #tasks-list li span {
@@ -149,15 +151,7 @@ body {
 
 #tasks-list li.checkbox_checked span {
     text-decoration: 2px line-through black;
-}
-
-.checkbox:checked::after {
-  content: '✔';
-  position: absolute;
-  left: 6%;
-  top: 25%;
-  font-size: 18px;
-  color: #00FFFF;
+    color: #D3D3D3;
 }
 
 .task-buttons {
